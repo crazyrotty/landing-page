@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import viteLogo from '/dragon2logo.svg'
-import './App.css'
+import { useState } from 'react';
+import viteLogo from '/dragon2logo.svg';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -17,15 +17,11 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          3D prints, and more coming soon!
-        </p>
+        <p>3D prints, and more coming soon!</p>
       </div>
-      <p className="read-the-docs">
-        Store Under Development
-      </p>
+      <p className="read-the-docs">Store Under Development</p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

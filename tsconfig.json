@@ -7,9 +7,9 @@
     "strict": true,
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "paths": {"@/*": ["src/*"]},
+    "paths": { "@/*": ["src/*"] },
     "types": ["node", "vite/client"],
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "include": ["src", "vite.config.ts"]
 }

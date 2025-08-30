@@ -33,11 +33,11 @@ export default {
       },
       borderRadius: {
         xl: '1rem',
-        '2xl': '1.5rem'
+        '2xl': '1.5rem',
       },
       boxShadow: {
         soft: '0 10px 25px hsl(var(--shadow) / 0.15)',
-      }
+      },
     },
   },
   plugins: [],
