@@ -91,10 +91,52 @@
         --ring: 160 70% 38%;
         --shadow: 174 47% 11%;
     }
-
-    body {
+    html,
+    body,
+    #root {
+        height: 100%;
         background-color: hsl(var(--background));
         color: hsl(var(--foreground));
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #:focus-visible {
+        outline: 2px solid hsl(var(--ring));
+        outline-offset: 2px;
+    }
+}
+
+#layer components {
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 font-medium transition;
+    }
+    .btn-primary {
+        @apply bg-primary text-primary-foreground shadow-soft hover:opacity-90;
+    }
+    .btn-secondary {
+        @apply bg-secondary text-secondary-foreground hover:opacity-90;
+    }
+    .badge {
+        @apply inline-flex items-center rounded-full bg-accent px-3 py-1 text-sm text-accent-foreground;
+    }
+}
+
+@layer utilities {
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10%);
+        }
+    }
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-float {
+        animation: none !important;
     }
 }
