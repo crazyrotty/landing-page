@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root,
+    [data-theme="light"] {
+        --background: 0 0% 100%;
+        --foreground: 222 31% 10%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222 31% 10%;
+
+        --muted: 210 40% 96%;
+        --muted-foreground: 222 11% 35%;
+
+        --primary: 222 76% 52%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 222 11% 35%;
+
+        --accent: 262 83% 58%;
+        --accent-foreground: 0 0% 100%;
+
+        --shadow: 222 47% 11%;
+}
+
+    [data-theme="dark"] {
+        --background: 222 20% 7%;
+        --foreground: 120 35% 82%;
+
+        --card: 220 20% 9%;
+        --card-foreground: 120 35% 82%;
+
+        --muted: 220 16% 14%;
+        --muted-foreground: 120 40% 65%;
+
+        --primary: 120 70% 55%;
+        --primary-foreground: 220 20% 7%;
+
+        --secondary: 220 16% 22%;
+        --secondary-foreground: 120 35% 82%;
+
+        --accent: 45 95% 55%;
+        --accent-foreground: 220 20% 7%;
+
+        --shadow: 220 48% 2%;
+    }
+    [data-theme="brand"] {
+        --background: 30 33% 94%;
+        --foreground: 23 32% 20%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 23 32% 20%;
+
+        --muted: 30 30% 80%;
+        --muted-foreground: 23 22% 35%;
+
+        --primary: 20 54% 45%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 28 35% 88%;
+        --secondary-foreground: 23 32% 25%;
+
+        --accent: 12 72% 50%;
+        --accent-foreground: 0 0% 100%;
+
+        --shadow: 23 55% 20%;
+    }
+    [data-theme='mint'] {
+        --background: 160 45% 95%;
+        --foreground: 180 30% 16%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 180 30% 16%;
+
+        --muted: 160 30% 90%;
+        --muted-foreground: 180 16% 35%;
+
+        --primary: 160 60% 35%;
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 150 35% 88%;
+        --secondary-foreground: 180 30% 16%;
+
+        --accent: 200 80% 45%;
+        --accent-foreground: 0 0% 100%;
+
+        --border: 160 22% 72%;
+        --ring: 160 70% 38%;
+        --shadow: 174 47% 11%;
+    }
+
+    body {
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
