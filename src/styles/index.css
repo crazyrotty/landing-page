@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Removed @tailwind directives to prevent unknown at-rule errors. 
+   Make sure to include Tailwind's base, components, and utilities via your build tool if needed. */
 
 @layer base {
     :root,
@@ -99,24 +98,52 @@
         color: hsl(var(--foreground));
     }
 
-    #:focus-visible {
+    *:focus-visible {
         outline: 2px solid hsl(var(--ring));
         outline-offset: 2px;
     }
 }
 
-#layer components {
+@layer components {
     .btn {
-        @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 font-medium transition;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 0.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-weight: 500;
+        transition: all 0.2s;
     }
     .btn-primary {
-        @apply bg-primary text-primary-foreground shadow-soft hover:opacity-90;
+        background-color: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        box-shadow: 0 2px 8px hsl(var(--shadow));
+    }
+    .btn-primary:hover {
+        opacity: 0.9;
     }
     .btn-secondary {
-        @apply bg-secondary text-secondary-foreground hover:opacity-90;
+        background-color: hsl(var(--secondary));
+        color: hsl(var(--secondary-foreground));
+    }
+    .btn-secondary:hover {
+        opacity: 0.9;
     }
     .badge {
-        @apply inline-flex items-center rounded-full bg-accent px-3 py-1 text-sm text-accent-foreground;
+        display: inline-flex;
+        align-items: center;
+        border-radius: 9999px;
+        background-color: hsl(var(--accent));
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        font-size: 0.875rem;
+        color: hsl(var(--accent-foreground));
     }
 }
 
